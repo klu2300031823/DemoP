@@ -102,6 +102,119 @@ questions = [
 "question":"A bag contains 3 red and 2 blue balls. Probability of drawing a red ball. Enter decimal up to 2 places (Example: 0.60)",
 "type":"text",
 "answer":"0.60"
+},
+{
+"section":"Probability",
+"question":"Two cards are drawn from a deck without replacement. Probability both are aces?",
+"type":"mcq",
+"options":["1/221","1/169","4/221","1/52"],
+"answer":"1/221"
+},
+{
+"section":"Time & Work",
+"question":"A can do a work in 15 days and B in 20 days. After working together for 4 days, A leaves. Remaining work is completed by B. Total days required?",
+"type":"mcq",
+"options":["10","11","12","13"],
+"answer":"11"
+},
+{
+"section":"Ratio",
+"question":"The ratio of incomes of A and B is 5:7 and their expenditures are 3:5. If both save ₹4000, income of B is?",
+"type":"mcq",
+"options":["14000","17500","21000","28000"],
+"answer":"17500"
+},
+{
+"section":"Ages",
+"question":"Five years ago, A was three times B's age. Ten years hence, A will be twice B's age. Present age of A?",
+"type":"mcq",
+"options":["30","35","40","45"],
+"answer":"40"
+},
+{
+"section":"Verbal",
+"question":"Choose the word most similar in meaning to 'Benevolent'.",
+"type":"mcq",
+"options":["Cruel","Kind","Lazy","Greedy"],
+"answer":"Kind"
+},
+{
+"section":"Verbal",
+"question":"Choose the correct sentence.",
+"type":"mcq",
+"options":[
+"She do not like coffee.",
+"She does not likes coffee.",
+"She does not like coffee.",
+"She not likes coffee."
+],
+"answer":"She does not like coffee."
+},
+{
+"section":"Verbal",
+"question":"Find the correctly spelt word.",
+"type":"mcq",
+"options":["Accomodation","Acommodation","Accommodation","Acomodation"],
+"answer":"Accommodation"
+},
+{
+"section":"Verbal",
+"question":"If BOOK is coded as CPPL, then PEN is coded as?",
+"type":"mcq",
+"options":["QFO","QEP","PFO","QFN"],
+"answer":"QFO"
+},
+{
+"section":"Verbal",
+"question":"Choose the antonym of 'Scarce'.",
+"type":"mcq",
+"options":["Rare","Limited","Abundant","Small"],
+"answer":"Abundant"
+},
+{
+"section":"Verbal",
+"question":"Fill in the blank: Neither Ram nor his friends ___ present.",
+"type":"mcq",
+"options":["was","were","is","be"],
+"answer":"were"
+},
+{
+"section":"Verbal",
+"question":"Choose the correct passive voice: 'They completed the project.'",
+"type":"mcq",
+"options":[
+"The project completed by them.",
+"The project was completed by them.",
+"The project is completed by them.",
+"The project had completed by them."
+],
+"answer":"The project was completed by them."
+},
+{
+"section":"Verbal",
+"question":"Find the odd word.",
+"type":"mcq",
+"options":["Apple","Banana","Mango","Potato"],
+"answer":"Potato"
+},
+{
+"section":"Verbal",
+"question":"Choose the sentence with correct punctuation.",
+"type":"mcq",
+"options":[
+"Lets eat, Grandpa!",
+"Let's eat Grandpa!",
+"Let's eat, Grandpa!",
+"Lets eat Grandpa!"
+],
+"answer":"Let's eat, Grandpa!"
+},
+{
+"section":"Verbal",
+"question":"Complete the analogy: Doctor : Hospital :: Teacher : ?",
+"type":"mcq",
+"options":["Book","School","Student","Class"],
+"answer":"School"
 }
 ]
 
