@@ -230,10 +230,14 @@ if "answers" not in st.session_state:
 if "submitted" not in st.session_state:
     st.session_state.submitted = False
 
-st_autorefresh(interval=1000,key="timer")
+if not st.session_state.submitted:
+    st_autorefresh(interval=1000, key="timer")
 
-elapsed = int(time.time() - st.session_state.start_time)
-remaining = TOTAL_TIME - elapsed
+if not st.session_state.submitted:
+    elapsed = int(time.time() - st.session_state.start_time)
+    remaining = TOTAL_TIME - elapsed
+else:
+    remaining = 0
 
 if remaining <= 0:
     st.session_state.submitted = True
