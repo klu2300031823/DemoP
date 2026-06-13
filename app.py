@@ -243,11 +243,10 @@ if remaining <= 0:
     st.session_state.submitted = True
     remaining = 0
 
-mins = remaining // 60
-secs = remaining % 60
-
-st.title("🧠 Aptitude Quiz")
-st.markdown(f"### ⏳ Time Left: {mins:02d}:{secs:02d}")
+if not st.session_state.submitted:
+    mins = remaining // 60
+    secs = remaining % 60
+    st.info(f"⏳ Time Left: {mins:02d}:{secs:02d}")
 
 if not st.session_state.submitted:
 
