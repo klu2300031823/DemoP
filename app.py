@@ -140,31 +140,32 @@ if not st.session_state.submitted:
     progress = (qno + 1) / len(questions)
     st.progress(progress)
 
-    st.subheader(f"Question {qno+1} / {len(questions)}")
+    st.subheader(f"Question {qno + 1} / {len(questions)}")
     st.write(q["question"])
-    if q["type"] == "mcq":
-    
-            selected = st.radio(
-                "Choose One",
-                q["options"],
-                index=None,
-                key=f"q_{qno}"
-            )
 
-        if selected:
+    if q["type"] == "mcq":
+
+        selected = st.radio(
+            "Choose One",
+            q["options"],
+            index=None,
+            key=f"q_{qno}"
+        )
+
+        if selected is not None:
             st.session_state.answers[qno] = selected
 
     else:
 
         txt = st.text_input(
             "Enter Answer",
-            value=st.session_state. answers.get(qno,""),
+            value=st.session_state.answers.get(qno, ""),
             key=f"text_{qno}"
         )
 
         st.session_state.answers[qno] = txt
 
-    c1,c2,c3 = st.columns(3)
+    c1, c2, c3 = st.columns(3)
 
     if qno == 0:
 
@@ -173,7 +174,7 @@ if not st.session_state.submitted:
                 st.session_state.current += 1
                 st.rerun()
 
-    elif qno == len(questions)-1:
+    elif qno == len(questions) - 1:
 
         with c1:
             if st.button("Previous"):
@@ -204,9 +205,9 @@ else:
     score = 0
     section_stats = {}
 
-    for i,q in enumerate(questions):
+    for i, q in enumerate(questions):
 
-        user = st.session_state.answers.get(i,"Not Answered")
+        user = st.session_state.answers.get(i, "Not Answered")
         correct = q["answer"]
 
         result = "❌"
@@ -218,7 +219,7 @@ else:
         sec = q["section"]
 
         if sec not in section_stats:
-            section_stats[sec] = [0,0]
+            section_stats[sec] = [0, 0]
 
         section_stats[sec][1] += 1
 
@@ -226,13 +227,13 @@ else:
             section_stats[sec][0] += 1
 
         st.markdown("---")
-        st.write(f"### Question {i+1}")
+        st.write(f"### Question {i + 1}")
         st.write(q["question"])
         st.write(f"Your Answer: {user}")
         st.write(f"Correct Answer: {correct}")
         st.write(f"Result: {result}")
 
-    percentage = round(score*100/len(questions),2)
+    percentage = round(score * 100 / len(questions), 2)
 
     st.markdown("---")
     st.success(f"Score : {score}/{len(questions)}")
@@ -241,11 +242,11 @@ else:
     strong = []
     weak = []
 
-    for sec,val in section_stats.items():
+    for sec, val in section_stats.items():
 
-        correct,total = val
+        correct_count, total = val
 
-        if correct/total >= 0.5:
+        if correct_count / total >= 0.5:
             strong.append(sec)
         else:
             weak.append(sec)
@@ -253,16 +254,16 @@ else:
     st.subheader("💪 Strong Performance")
 
     if strong:
-        for i in strong:
-            st.write("✅",i)
+        for item in strong:
+            st.write("✅", item)
     else:
         st.write("None")
 
     st.subheader("📚 Areas To Improve")
 
     if weak:
-        for i in weak:
-            st.write("❌",i)
+        for item in weak:
+            st.write("❌", item)
     else:
         st.write("None")
 
