@@ -142,14 +142,14 @@ if not st.session_state.submitted:
 
     st.subheader(f"Question {qno+1} / {len(questions)}")
     st.write(q["question"])
-if q["type"] == "mcq":
-
-        selected = st.radio(
-            "Choose One",
-            q["options"],
-            index=None,
-            key=f"q_{qno}"
-        )
+    if q["type"] == "mcq":
+    
+            selected = st.radio(
+                "Choose One",
+                q["options"],
+                index=None,
+                key=f"q_{qno}"
+            )
 
         if selected:
             st.session_state.answers[qno] = selected
