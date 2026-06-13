@@ -25,8 +25,8 @@ questions = [
 "section":"Ages",
 "question":"Father is 4 times his son's age. After 10 years, father will be twice the son's age. Present son's age?",
 "type":"mcq",
-"options":["8","10","12","14"],
-"answer":"10"
+"options":["8","5","10","14"],
+"answer":"5"
 },
 {
 "section":"Probability",
@@ -122,7 +122,7 @@ questions = [
 "question":"The ratio of incomes of A and B is 5:7 and their expenditures are 3:5. If both save ₹4000, income of B is?",
 "type":"mcq",
 "options":["14000","17500","21000","28000"],
-"answer":"17500"
+"answer":"14000"
 },
 {
 "section":"Ages",
